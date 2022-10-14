@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html id="test" lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vervoerregio Amsterdam</title>
+    <link rel="stylesheet" href="./styles/index.css">
+</head>
+
+<body class="informatie-background">
+    <header class="sticky">
+        <section class="header-logo">
+            <a href="index.html">
+                <img src="assets/vervoerregio-amsterdam-logo.svg" height="auto" width="250px" alt="hero-logo">
+            </a>
+        </section>
+        <section class="header-wat-gebeurt-er">
+            <h5>Wat gebeurt er?</h5>
+        </section>
+        <section class="header-wat-doen-wij">
+            <h5>Wat doen wij?</h5>
+        </section>
+        <section class="header-wie-zijn-wij">
+            <h5>Wie zijn wij?</h5>
+        </section>
+        <section class="burger-menu">
+            <img src="assets/burger-menu.svg" height="auto" width="50px" alt="menu">
+        </section>
+        
+    </header>
+
+    <section class="info-wrapper">
+        <section class="blok-1">
+            <a href="index.html">
+                <h3 class="hero-text-1">Onze bijdragen > Afbeeldingen</h3>
+            </a>
+            <h1 class="hero-text-2">Ontwerp</h1>
+            <p class="hero-text-3">Content van een website dat niet uit tekst bestaat, 
+            <br>zoals foto’s, icoontjes en andere afbeeldingen, kan 
+            <br>toegankelijk worden gemaakt door deze ook als 
+            <br>tekst beschikbaar te maken. Tekst kan namelijk door 
+            <br>hulptechnologieën op verschillende manieren 
+            <br>worden gepresenteerd. Voorleessoftware kan een 
+            <br>tekst omzetten in spraak (auditief) en een
+            <br>brailleleesregel kan het vertalen naar braille 
+            <br>(tactiel). Zo worden afbeelding ook toegankelijk voor 
+            <br>bezoekers die de afbeelding niet kunnen waarnemen
+            </p>
+            
+        </section>
+
+        <section class="blok-2 mt-4">
+
+            <!--=========================================================================-->
+
+            <button class="accordion">Zorg dat afbeeldingen in de code een 
+                <br>tekstalternatief kunnen krijgen</button>
+
+                <div class="panel">
+                    <p>Alle afbeeldingen moeten een tekstalternatief hebben. Een tekstalternatief kan op verschillende manieren worden toegevoegd:</p>
+                    <h3>Tekstalternatief voor een <code>&lt;img&gt;</code>-element</h3>
+                    <p>Bij een <code>&lt;img&gt;</code>-element wordt een tekstalternatief gegeven met behulp van het <code>&lt;alt&gt;</code>-attribuut.</p>
+                    <p>In de code ziet dat er zo uit:</p>
+                    <code>&lt;img src="hond.jpg" alt="Hond speelt met een bal"&gt;</code>
+
+                    <h3>Tekstalternatief voor een <code>&lt;svg&gt;</code>-element</h3>
+                    <p>Bij een <code>&lt;svg&gt;</code>-element wordt een tekstalternatief gegeven met behulp van het <code>title</code>-element in de svg. Gebruik ook aria-attribuut <code>role="img"</code> om ervoor te zorgen dat zo veel mogelijk ondersteunende technologieën het <code>&lt;svg&gt;</code>-element herkennen als een afbeelding.</p>
+                    <p>In de code ziet dat er zo uit:</p>
+                    <code>&lt;svg role="img"&gt;
+                    <br>&lt;title>Hond speelt met een bal&lt;/title&gt;
+                    <br>&lt;/svg&gt;</code>
+
+                    <h3>Tekstalternatief voor afbeeldingen die is geplaatst met CSS</h3>
+                    <p>Aan een afbeelding die geplaatst is met CSS kan een tekstalternatief worden gegeven met een <code>aria-label</code>-label.</p>
+                    <p>In de code ziet dat er zo uit:</p>
+                    <code>&lt;div id=”logo” aria-label=”Hond speelt met een bal”&gt;&lt;/div&gt;</code>
+                </div>
+
+            <!--=========================================================================-->
+
+            <button class="accordion">Geef complexe afbeeldingen een 
+                <br>langere beschrijving</button>
+
+                <div class="panel">
+                    <p>Soms is het niet mogelijk om een afbeelding volledig te beschrijven in een kort tekstalternatief. Bijvoorbeeld als het gaat om een uitgebreide infographic of een grafiek. Dit soort complexe afbeeldingen moeten ook volledig worden beschreven in een tekstalternatief. Geef in dat geval naast een beknopte beschrijving in het <code>alt</code>-attribuut ook een langere beschrijving in de omringende tekst.</p>
+                    <code>&lt;img src="grafiek.jpg" alt="Verkoopcijfers zijn in 2021 met 18% gestegen"&gt;
+                        <br>&lt;div&gt;
+                        <br>&lt;p&gt;De groei van maandelijkse verkopen in 2021 tegen 2020 verliep als volgt:&lt;/p&gt;
+                        <br>&lt;ul&gt;
+                        <br>&lt;li&gt;Januari: +22%&lt;/li&gt;
+                        <br>&lt;li&gt;
+                        <br>&lt;/div&gt;
+                    </code>
+                        <p>Een langere beschrijving mag ook op een aparte pagina worden geplaatst. Plaats dan een link met de verwijzing naar die andere pagina direct voor of na de afbeelding.</p>
+                    <code>&lt;img src="grafiek.jpg" alt="Verkoopcijfers zijn in 2021 met 18% gestegen"&gt;
+                        <br>&lt;a href=”/langere-beschrijving.html”&gt;&lt;Uitgebreide beschrijving van de grafiek met verkoopcijfers&lt;/a&gt;
+                    </code>
+                    <p>De omringende tekst hoort ook te worden gekoppeld aan de afbeelding. Dit is geen verplichting maar wel erg handig. Hiervoor kan gebruik worden gemaakt van het <code>aria-describedby</code>-attribuut. Gebruik het <code>ID</code> van het element waar de complexe afbeelding beschreven wordt. Deze informatie hoort dan ook zichtbaar te zijn voor bezoekers die wel kunnen zien.</p>
+                    <code>&lt;img src="grafiek.jpg" alt="Verkoopcijfers zijn in 2020 met 18% gestegen" aria-describedby="beschrijving"&gt;
+                        <br>&lt;div id="beschrijving"&gt;
+                        <br>&lt;p&gt;Januari: +22%&lt;/p&gt;
+                        <br>&lt;ul&gt;
+                        <br>&lt;li&gt;Januari: +22%&lt;/li&gt;
+                        <br>&lt;li&gt;
+                        <br>&lt;/div&gt;
+                    </code>
+                </div>
+
+            <!--=========================================================================-->
+
+            <button class="accordion">Zorg dat decoratieve afbeeldingen door 
+                <br>hulptechnologieën genegeerd worden</button>
+
+                <div class="panel">
+                    <p>Afbeeldingen die puur ter decoratie op de pagina zijn geplaatst, horen geen tekstalternatief te hebben. Dit zijn bijvoorbeeld afbeeldingen die geen informatie overdragen en niet noodzakelijk zijn voor het begrijpen van de tekst. Deze afbeeldingen moeten worden genegeerd door hulptechnologieën. Decoratieve afbeeldingen kunnen het best met CSS worden geplaatst.</p>
+                    <code>&lt;div class="line"&lt;/div&gt;</code>
+                    <br>
+                    <code>.line {
+                    <br>background-image: url("horizontale-lijn.jpg");
+                    <br>}
+                    </code>
+                    <p>Als het niet mogelijk is om een decoratieve afbeelding met CSS te plaatsen, dan moet het <code>alt</code>-attribuut in het <code>&lt;img&gt;</code>-element worden leeg gelaten. Het <code>alt</code>-attribuut moet wel aanwezig zijn maar het heeft dan geen tekst.</p>
+                    <code>&lt;img src="horizontale-lijn.jpg" alt="" /&gt;</code>
+                </div>
+
+            <!--=========================================================================-->
+
+            <button class="accordion">Zorg dat bewegende content kan worden 
+                <br>gepauzeerd, gestopt of worden uitgezet</button>
+
+                <div class="panel">
+                    <p>Zorg dat alle bewegende, scrollende of knipperende content dat automatisch start én langer dan 5 seconden duurt kan worden gepauzeerd, gestopt of worden uitgezet. Onder bewegende, scrollende of knipperende content vallen onder andere carrousels, animaties op de pagina, bewegende advertenties, enz. Bezoekers met een cognitieve beperking kunnen er door worden afgeleid. Ook voor bezoekers die gebruik maken van een schermlezer kan dit storend zijn.</p>
+                    <p>Deze regels gelden ook alle automatisch verversende content, maar hiervoor geldt ook de frequentie van updates mag worden aangepast.</p>
+                </div>
+        </section>
+    </section>
+
+    <!--===== SECTIE 2 ====================================================================-->
+
+    <section class="info-wrapper-2">
+        <img class="green-bar-lg" src="assets/green-bar-lg-w-b.svg" height="auto" width="100%" alt="hero-afbeelding">
+        <section class="blok-3">
+            <h1 class="hero-text-2 green-header-space">Meer informatie</h1>
+
+            <button class="accordion">Zorg dat afbeeldingen in de code een 
+                <br>tekstalternatief kunnen krijgen</button>
+
+                <div class="panel">
+                    <p>Alle afbeeldingen moeten een tekstalternatief hebben. Een tekstalternatief kan op verschillende manieren worden toegevoegd:</p>
+                    <h3>Tekstalternatief voor een <code>&lt;img&gt;</code>-element</h3>
+                    <p>Bij een <code>&lt;img&gt;</code>-element wordt een tekstalternatief gegeven met behulp van het <code>&lt;alt&gt;</code>-attribuut.</p>
+                    <p>In de code ziet dat er zo uit:</p>
+                    <code>&lt;img src="hond.jpg" alt="Hond speelt met een bal"&gt;</code>
+
+                    <h3>Tekstalternatief voor een <code>&lt;svg&gt;</code>-element</h3>
+                    <p>Bij een <code>&lt;svg&gt;</code>-element wordt een tekstalternatief gegeven met behulp van het <code>title</code>-element in de svg. Gebruik ook aria-attribuut <code>role="img"</code> om ervoor te zorgen dat zo veel mogelijk ondersteunende technologieën het <code>&lt;svg&gt;</code>-element herkennen als een afbeelding.</p>
+                    <p>In de code ziet dat er zo uit:</p>
+                    <code>&lt;svg role="img"&gt;
+                    <br>&lt;title>Hond speelt met een bal&lt;/title&gt;
+                    <br>&lt;/svg&gt;</code>
+
+                    <h3>Tekstalternatief voor afbeeldingen die is geplaatst met CSS</h3>
+                    <p>Aan een afbeelding die geplaatst is met CSS kan een tekstalternatief worden gegeven met een <code>aria-label</code>-label.</p>
+                    <p>In de code ziet dat er zo uit:</p>
+                    <code>&lt;div id=”logo” aria-label=”Hond speelt met een bal”&gt;&lt;/div&gt;</code>
+                </div>
+
+            <!--=========================================================================-->
+
+            <button class="accordion">Geef complexe afbeeldingen een 
+                <br>langere beschrijving</button>
+
+                <div class="panel">
+                    <p>Soms is het niet mogelijk om een afbeelding volledig te beschrijven in een kort tekstalternatief. Bijvoorbeeld als het gaat om een uitgebreide infographic of een grafiek. Dit soort complexe afbeeldingen moeten ook volledig worden beschreven in een tekstalternatief. Geef in dat geval naast een beknopte beschrijving in het <code>alt</code>-attribuut ook een langere beschrijving in de omringende tekst.</p>
+                    <code>&lt;img src="grafiek.jpg" alt="Verkoopcijfers zijn in 2021 met 18% gestegen"&gt;
+                        <br>&lt;div&gt;
+                        <br>&lt;p&gt;De groei van maandelijkse verkopen in 2021 tegen 2020 verliep als volgt:&lt;/p&gt;
+                        <br>&lt;ul&gt;
+                        <br>&lt;li&gt;Januari: +22%&lt;/li&gt;
+                        <br>&lt;li&gt;
+                        <br>&lt;/div&gt;
+                    </code>
+                        <p>Een langere beschrijving mag ook op een aparte pagina worden geplaatst. Plaats dan een link met de verwijzing naar die andere pagina direct voor of na de afbeelding.</p>
+                    <code>&lt;img src="grafiek.jpg" alt="Verkoopcijfers zijn in 2021 met 18% gestegen"&gt;
+                        <br>&lt;a href=”/langere-beschrijving.html”&gt;&lt;Uitgebreide beschrijving van de grafiek met verkoopcijfers&lt;/a&gt;
+                    </code>
+                    <p>De omringende tekst hoort ook te worden gekoppeld aan de afbeelding. Dit is geen verplichting maar wel erg handig. Hiervoor kan gebruik worden gemaakt van het <code>aria-describedby</code>-attribuut. Gebruik het <code>ID</code> van het element waar de complexe afbeelding beschreven wordt. Deze informatie hoort dan ook zichtbaar te zijn voor bezoekers die wel kunnen zien.</p>
+                    <code>&lt;img src="grafiek.jpg" alt="Verkoopcijfers zijn in 2020 met 18% gestegen" aria-describedby="beschrijving"&gt;
+                        <br>&lt;div id="beschrijving"&gt;
+                        <br>&lt;p&gt;Januari: +22%&lt;/p&gt;
+                        <br>&lt;ul&gt;
+                        <br>&lt;li&gt;Januari: +22%&lt;/li&gt;
+                        <br>&lt;li&gt;
+                        <br>&lt;/div&gt;
+                    </code>
+                </div>
+
+            <!--=========================================================================-->
+
+            <button class="accordion">Zorg dat decoratieve afbeeldingen door 
+                <br>hulptechnologieën genegeerd worden</button>
+
+                <div class="panel">
+                    <p>Afbeeldingen die puur ter decoratie op de pagina zijn geplaatst, horen geen tekstalternatief te hebben. Dit zijn bijvoorbeeld afbeeldingen die geen informatie overdragen en niet noodzakelijk zijn voor het begrijpen van de tekst. Deze afbeeldingen moeten worden genegeerd door hulptechnologieën. Decoratieve afbeeldingen kunnen het best met CSS worden geplaatst.</p>
+                    <code>&lt;div class="line"&lt;/div&gt;</code>
+                    <br>
+                    <code>.line {
+                    <br>background-image: url("horizontale-lijn.jpg");
+                    <br>}
+                    </code>
+                    <p>Als het niet mogelijk is om een decoratieve afbeelding met CSS te plaatsen, dan moet het <code>alt</code>-attribuut in het <code>&lt;img&gt;</code>-element worden leeg gelaten. Het <code>alt</code>-attribuut moet wel aanwezig zijn maar het heeft dan geen tekst.</p>
+                    <code>&lt;img src="horizontale-lijn.jpg" alt="" /&gt;</code>
+                </div>
+
+            <!--=========================================================================-->
+
+            <button class="accordion">Zorg dat bewegende content kan worden 
+                <br>gepauzeerd, gestopt of worden uitgezet</button>
+
+                <div class="panel">
+                    <p>Zorg dat alle bewegende, scrollende of knipperende content dat automatisch start én langer dan 5 seconden duurt kan worden gepauzeerd, gestopt of worden uitgezet. Onder bewegende, scrollende of knipperende content vallen onder andere carrousels, animaties op de pagina, bewegende advertenties, enz. Bezoekers met een cognitieve beperking kunnen er door worden afgeleid. Ook voor bezoekers die gebruik maken van een schermlezer kan dit storend zijn.</p>
+                    <p>Deze regels gelden ook alle automatisch verversende content, maar hiervoor geldt ook de frequentie van updates mag worden aangepast.</p>
+                </div>
+        </section>
+
+        <section class="blok-4">
+        </section>
+    
+    </section>
+
+     <!--=========================================================================-->
+
+    
+    <footer>
+        <div class="footer-blok-1">
+            <h6>Contact informatie</h6><br>
+            <h6>Vervoerregio Amsterdam</h6>
+            <h6>info@vervoerregio.nl</h6>
+            <h6>Jodenbreestraat 25, 1011 NH</h6>
+            <h6>Tel: 020-5273700</h6>
+        </div>
+
+        <div class="footer-blok-2">
+            <h6>Navigatie</h6><br>         
+            <h6>Wat gebeurt er?</h6>
+            <h6>Wat doen wij?</h6>
+            <h6>Wie zijn wij?</h6>
+        </div>
+
+        <div class="footer-blok-3">
+            <h6>Socials</h6><br>           
+            <h6>Facebook</h6>
+            <h6>Linkedin</h6>
+            <h6>Instagram</h6>
+        </div>
+
+        <div class="footer-blok-4">
+            <h6>Documenten</h6><br>            
+            <h6>Aanmelden Nieuwsbrief</h6>
+            <h6>Privacy Statement</h6>
+        </div>
+    </footer>
+        
+</body>
+
+</html>
+
+<script src="./scripts/index.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script src="https://rawgit.com/jquery/jquery-mousewheel/master/jquery.mousewheel.js"></script>
