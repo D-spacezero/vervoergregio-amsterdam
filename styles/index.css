@@ -205,6 +205,10 @@
 
     }
 
+    .hero-svg {
+      display:none;
+    }
+
     .kies-onderwerp-header-text{
       font-size:25pt!important;
       margin-left:40px;
