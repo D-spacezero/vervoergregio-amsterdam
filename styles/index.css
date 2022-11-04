@@ -9,13 +9,16 @@
     font-size:50pt;
   }
 
-  h2 {
+  h3 {
     font-size:30pt;
   }
 
-  h3{
+  /*h3{
     font-size:20pt;
-    color:#34A4D0;
+    color:#0065ff;
+  }*/
+
+  h4{
   }
 
   h5{
@@ -25,10 +28,24 @@
     font-size:10pt;
   }
 
-  h6{
+  .footer-blok-1 h4{
+    color:white!important;
+    font-size:13pt!important;
+    font-weight:400!important;
+  }
+  .footer-blok-2 h4{
     color:white;
-    font-size:10pt;
-    margin:8pt;
+    font-size:13pt;
+    font-weight:400;
+  }
+  .footer-blok-3 h4{
+    color:white;
+    font-size:13pt;
+    font-weight:400;
+  }
+  .footer-blok-4 h4{
+    color:white;
+    font-size:13pt;
     font-weight:400;
   }
 
@@ -69,6 +86,7 @@
     grid-template-areas:
     ". header-logo header-logo header-wat-gebeurt-er header-wat-doen-wij header-wie-zijn-wij burger-menu ."
   }
+
 
   .sticky {
     position: fixed;
@@ -120,16 +138,103 @@
   .hero-text-1{
     margin:0;
     padding-bottom:0.5em;
+    font-size:20pt;
+    font-weight:600;
+    color:#0065ff;
   }
 
   .hero-text-2{
     margin:0;
   }
 
+  @media only screen and (max-width: 1456px) {
+
+    header {
+      background:white;
+      filter: drop-shadow(0 0.2rem 0.25rem rgba(0, 0, 0, 0.1));
+      height: 80px;
+      display: grid;
+      grid-template-columns: 40px 1fr 1fr 40px;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+      ". header-logo burger-menu ."
+    }
+
+    .header-wat-gebeurt-er {
+      display:none;
+    }
+  
+    .header-wat-doen-wij {
+      display:none;
+    }
+  
+    .header-wie-zijn-wij {
+      display:none;
+    }
+
+    .hero-text-2{
+      font-size:25pt;
+    }
+
+    .hero-text-3{
+      width: 100%!important;
+    }
+
+    .hero-btn-1 {
+      width:100%!important;
+    }
+
+    .hero-btn-2 {
+      width:100%!important;
+      margin-top: 1.3em!important;
+    }
+
+
+    .hero{
+      display: grid;
+      padding-top:3em;
+      background: #FBFBFF;
+      grid-template-columns: 40px 1fr 40px;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+      ". hero-text ."
+
+      ". hero-svg ."
+
+    }
+
+    .kies-onderwerp-header-text{
+      font-size:25pt!important;
+      margin-left:40px;
+      margin-right:40px;
+    }
+
+  }
+
+  @media only screen and (min-width: 1456px) and (max-width: 1620px) {
+
+    .hero-text-2{
+      font-size:40pt;
+    }
+
+    .kies-onderwerp-header-text{
+      font-size:34pt!important;
+    }
+
+  }
+
   .hero-text-3{
     margin:0;
     padding-top:1em;
+    width: 530px;
   }
+
+  .hero-text-3-info{
+    margin:0;
+    padding-top:1em;
+    width: 570px;
+  }
+
   .hero-svg {
     grid-area: hero-svg;
     padding: 2em;
@@ -180,7 +285,7 @@
   }
 
   .kies-onderwerp-header-text{
-    font-size:40pt!important;
+    font-size:40pt;
   }
 
   /* ==== OPTIONS ==========================================================================*/
@@ -208,6 +313,154 @@
     padding-bottom:4em;
     margin-top:0.5em;
     margin-bottom:0.5em;
+  }
+
+  @media only screen and (max-width: 1455px) {
+
+    .option-wrapper{
+      display: grid;
+      margin-bottom: 4em;
+      grid-template-columns: 40px 1fr 40px;
+      grid-template-rows: 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr 2fr;
+      grid-template-areas:
+
+      ". o-afbeeldingen ." 
+
+      ". o-bediening ."
+
+      ". o-formulieren ."
+
+      ". o-media ."
+
+      ". o-navigatie ."
+
+      ". o-ontwerp ."
+
+      ". o-teksten ."
+
+      ". o-techniek ."
+
+      ". o-vormgeving ."
+
+    }
+
+
+    .o-afbeeldingen {
+      margin-left:0em!important;
+      margin-right:0em!important;
+    }
+  
+    .o-bediening {
+      margin-left:0em!important;
+      margin-right:0em!important;
+
+    }
+  
+    .o-formulieren {
+      margin-left:0em!important;
+      margin-right:0em!important;
+    }
+    
+    .o-media {
+      margin-left:0em!important;
+      margin-right:0em!important;
+
+    }
+  
+    .o-navigatie {
+      margin-left:0em!important;
+      margin-right:0em!important;
+
+    }
+  
+    .o-ontwerp {
+      margin-left:0em!important;
+      margin-right:0em!important;
+
+    }
+  
+    .o-teksten {
+      margin-left:0em!important;
+      margin-right:0em!important;
+
+    }
+  
+    .o-techniek {
+      margin-left:0em!important;
+      margin-right:0em!important;
+
+    }
+
+
+  }
+
+  @media only screen and (min-width: 1456px) and (max-width: 1620px) {
+
+    .option-wrapper{
+      display: grid;
+      margin-bottom: 4em;
+      grid-template-columns: 194px 1fr 1fr 194px;
+      grid-template-rows: 2fr 2fr 2fr 2fr;
+      grid-template-areas:
+      ". o-afbeeldingen o-bediening ."
+  
+      ". o-formulieren o-media ."
+
+      ". o-navigatie o-ontwerp ."
+  
+      ". o-teksten o-techniek ."
+
+      ". o-vormgeving o-vormgeving ."
+
+    }
+
+    .o-afbeeldingen {
+      margin-right:0.5em;
+      margin-left:0em!important;
+    }
+  
+    .o-bediening {
+      margin-right:0.5em;
+      margin-right:0em!important;
+
+    }
+  
+    .o-formulieren {
+      margin-right:0.5em;
+      margin-left:0.0em!important;
+    }
+    
+    .o-media {
+      margin-left:0.5em;
+      margin-right:0em!important;
+
+    }
+  
+    .o-navigatie {
+      margin-right:0.5em;
+      margin-left:0em!important;
+
+    }
+  
+    .o-ontwerp {
+      margin-left:0.5em;
+      margin-right:0em!important;
+
+    }
+  
+    .o-teksten {
+      margin-right:0.5em;
+      margin-left:0em!important;
+
+    }
+  
+    .o-techniek {
+      margin-left:0.5em;
+      margin-right:0em!important;
+
+    }
+
+
   }
 
   .o-afbeeldingen {
@@ -328,6 +581,40 @@
     ". blok-3 blok-3 ."
   }
 
+  @media only screen and (max-width: 1456px) { 
+
+    .hero-text-3-info{
+      width: 100%;
+    }
+
+    .info-wrapper{
+      display: grid;
+      padding-top:7em;
+      padding-bottom:7em;
+      background: #FBFBFF;
+      grid-template-columns: 40px 1fr 1fr 40px;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+      ". blok-1 blok-1 ."
+      ". blok-2 blok-2 ."
+
+    }
+    .info-wrapper-2{
+      display: grid;
+      background:#25AE93;
+      grid-template-columns: 40px 1fr 1fr 40px;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+      ". blok-3 blok-3 ."
+
+    }
+
+    .green-header-space {
+      font-size:40pt!important;
+    }
+  }
+
+
   .blok-1 {
     grid-area: blok-1;
     padding-top:6em;
@@ -352,10 +639,17 @@
   .green-header-space {
     padding-bottom:0.75em;
     color:white;
+    font-size:50pt;
   }
   .green-bar-lg {
     width:2020px;
-    margin-left:-180px;
+    margin-left:-115px;
+  }
+
+  @media only screen and (max-width: 1700px) {
+    .green-bar-lg {
+      margin-left:-180px;
+    }
   }
 
   .informatie-background {
@@ -373,6 +667,34 @@
     grid-template-areas:
     ". footer-blok-1 footer-blok-2 footer-blok-3 footer-blok-4 ."
   }
+
+  @media only screen and (max-width: 1456px) {
+
+    footer {
+      background: #131A27;
+      text-align: center;
+      display: grid;
+      grid-template-columns: 40px 1fr 40px;
+      grid-template-rows: 1fr;
+      grid-template-areas:
+      ". footer-blok-1 ."
+
+    }
+
+    .footer-blok-2 {
+      display:none;
+    }
+  
+    .footer-blok-3 {
+      display:none;
+    }
+  
+    .footer-blok-4 {
+      display:none;
+    }
+
+  }
+
 
   .footer-blok-1 {
     grid-area: footer-blok-1;
