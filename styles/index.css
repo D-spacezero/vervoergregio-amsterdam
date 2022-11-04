@@ -1,8 +1,9 @@
   /* ==== PRESETS ==========================================================================*/
 
   body {
-      margin: 0 auto;
-      }
+    margin: 0 auto;
+    font-family: "Helvetica", Sans-Serif;
+  }
 
   h1 {
     color: #213372;
