@@ -12,3 +12,20 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+
+function contrast() {
+  var element = document.body;
+  element.classList.toggle("dark-contrast");
+}
+
+function fontSize() {
+  var element = document.body;
+  element.classList.toggle("textgrow");
+}
+
+function fontSize() {
+  const textincrease = document.getElementById("fontIncrease")
+  textincrease.classList.toggle('text-large')
+  textincrease.style.fontSize = textincrease.style.fontSize === '200%' ? '100%' : '200%'
+};

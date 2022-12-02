@@ -1,0 +1,109 @@
+/* ==== ICON ==========================================================================*/
+
+.icon{
+    display: grid;
+    padding-top:80px;
+    grid-template-columns: 194px 1fr 1fr 194px;
+    grid-template-rows: 2fr;
+    grid-template-areas:
+    ". icon-left icon-right icon-side-right"
+  }
+
+  .icon h3{
+    font-size:30pt;
+  }
+
+  .icon-left{
+    grid-area: icon-left;
+    background: white;
+    padding-right: 3em;
+    margin-bottom: 4em;
+
+
+  }
+
+  .icon-splitbox{
+    display: grid;
+    text-align:center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr;
+    grid-template-areas:
+    "icon-splitbox-left icon-splitbox-right"
+  }
+
+  .icon-splitbox-illustratie{
+    display: grid;
+    text-align:center;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr;
+    grid-template-areas:
+    "icon-splitbox-right icon-splitbox-right"
+  }
+
+  .icon-splitbox-right{
+    grid-area: icon-splitbox-right;
+
+  }
+
+  .icon-validationbox{
+    margin-top:5em;
+  }
+  .icon-validationbox p {
+    font-size: 16pt !important;
+    color: #2F2F2F;
+    padding-bottom:2em;
+  }
+
+  .icon-splitbox-left{
+    grid-area: icon-splitbox-left;
+
+  }
+
+  .oog-1{
+    padding-top:3em;
+    padding-bottom:2.2em;
+  }
+
+  .oog-2{
+    padding-top:1.33em;
+    padding-bottom:0.33em;
+
+  }
+
+  .oog-3{
+    padding-top:3em;
+
+  }
+
+  .oog-4{
+    padding-top:3em;
+
+
+  }
+
+  .icon-validationbox{
+    border: 5px solid black;
+    border-radius:10px;
+  }
+
+  .icon-side-right{
+    grid-area: icon-side-right;
+    color: #FAFAFA;
+  }
+
+  section.icon-side-right {
+    background: #FAFAFA;
+  }
+
+  .icon p{
+    font-size: 16pt !important;
+    color: #2F2F2F;
+  }
+
+  .icon-right {
+    grid-area: icon-right;
+    background:#FAFAFA;
+    padding-left: 3em;
+    padding-bottom: 4em;
+
+  }
