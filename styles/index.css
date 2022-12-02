@@ -31,22 +31,22 @@
   /* Increase contrast */
   .dark-contrast {
     --c-wit: #ffffff;
-    --c-witaccordion: #000000;
-    --c-witoff: #000000;
+    --c-witaccordion: #131A27;
+    --c-witoff: #131A27;
     --c-titeldonkerblauw: #ffffff;
     --c-textzwart: #ffffff;
     --c-contrasttext: #ffffff;
     --c-roodgradient: linear-gradient(to bottom right, #B9005F, #E30059);
-    --c-footertext:#000000!important;
+    --c-footertext:#131A27!important;
     --c-zwartachtergrond: #ffffff;
     --c-accordionbackground: #ffffff;
     --c-accordionbackgroundhover: #ffffff;
-    --c-greenbar:#000000;
-    --c-greenbargreen:#000000;
-    --c-greenbarbackground:#000000;
-    --c-bluebar: #000000;
-    --c-bluebargreen:#000000;
-    --c-bluebarbackground:#000000;
+    --c-greenbar:#131A27;
+    --c-greenbargreen:#131A27;
+    --c-greenbarbackground:#131A27;
+    --c-bluebar: #131A27;
+    --c-bluebargreen:#131A27;
+    --c-bluebarbackground:#131A27;
 
     --width-contrast:100%;
     transition: 4.0s ease-out;
